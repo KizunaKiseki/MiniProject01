@@ -25,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="images")
+app.mount("/images", StaticFiles(directory=UPLOAD_DIR), name="images")
 
 @app.get("/")
 async def root():
