@@ -1,7 +1,8 @@
 services:
 - type: web
-name: activity08
+name: MiniProject01
 env: python
+rootDir: backend
 plan: free
 region: oregon # choose your preferred region in Render
 buildCommand: |
@@ -12,5 +13,5 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 autoDeploy: true
 envVars:
 - key: PYTHON_VERSION
-value: “3.14”
+value: "3.14"
 healthCheckPath: /
